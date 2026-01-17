@@ -23,3 +23,6 @@ _darcs
 ^/COPYING
 
 Makefile
+install # setup script
+brew-requirements.txt
+

@@ -1,0 +1,18 @@
+# Helper functions for creating HTTPS tunnel from local to GCP VM
+tunnel-start() {
+    instance_prefix=${1:=gke}
+    tunnel_port=${2:=8080}
+    local instance=$(gcloud compute instances list | grep ${instance_prefix} | head -n1 | awk '{print $1}')
+    gcloud compute ssh --tunnel-through-iap  --ssh-flag="-D :${tunnel_port} -fN -o TCPKeepAlive=yes -o ServerAliveInterval=5" $instance
+}
+
+enable-proxy() {
+    export HTTPS_PROXY=socks5://127.0.0.1:${1:=8080}
+    export https_proxy=socks5://127.0.0.1:${1:=8080}
+}
+
+disable-proxy() {
+    unset HTTPS_PROXY
+    unset https_proxy
+}
+

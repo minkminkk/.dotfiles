@@ -1,41 +1,19 @@
-# Compiled Lua sources
-luac.out
+.DS_Store
+.swp
 
-# luarocks build files
-*.src.rock
-*.zip
-*.tar.gz
+# Tmux
+tmux/plugins
 
-# Object files
-*.o
-*.os
-*.ko
-*.obj
-*.elf
+# Kickstart nvim gitignore
+tags
+test.sh
+.luarc.json
 
-# Precompiled Headers
-*.gch
-*.pch
+spell/
+lazy-lock.json
 
-# Libraries
-*.lib
-*.a
-*.la
-*.lo
-*.def
-*.exp
-
-# Shared objects (inc. Windows DLLs)
-*.dll
-*.so
-*.so.*
-*.dylib
-
-# Executables
-*.exe
-*.out
-*.app
-*.i*86
-*.x86_64
-*.hex
+# K9s
+k9s.log
+k9s/clusters/
+k9s/screen-dumps/
 

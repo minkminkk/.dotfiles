@@ -1,0 +1,14 @@
+neovim
+k9s
+kubectl
+kubectx
+helm
+hugo
+jsonnet
+rg
+stow
+terraform-docs
+tmux
+yq
+fd
+
