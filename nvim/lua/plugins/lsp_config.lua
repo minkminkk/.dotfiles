@@ -22,9 +22,8 @@ local servers = {
     },
   },
   pyright = {},
-  ruff = {},
+  ruff = { manual_install = true },
   terraformls = {
-    pattern = { '*.tf', '*.tfvars' },
     callback = function()
       vim.lsp.buf.format { async = false }
     end,

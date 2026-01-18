@@ -33,7 +33,7 @@ fi
 
 # Environment variables
 export TERM=xterm-256color
-export PATH="/snap/bin:$PATH"	# add installed snap binaries into PATH
+export PATH="/snap/bin:/usr/local/go/bin:$HOME/.local/bin:$PATH"	# add installed snap binaries into PATH
 export LDFLAGS="-L/opt/homebrew/opt/libffi/lib"
 export CPPFLAGS="-I/opt/homebrew/opt/libffi/include"
 export PYTHONDONTWRITEBYTECODE=1
